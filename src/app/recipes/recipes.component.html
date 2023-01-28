@@ -1,1 +1,11 @@
-<p>recipes works!</p>
+<div class="row">
+    <div class="col-md-5">
+        <app-recipe-list (selectedRecipe)="reciveRecipe($event)"></app-recipe-list>
+    </div>
+    <div class="col-md-7">
+        <app-recipe-detail *ngIf="recipetoPass; else infotext" [recipe]="recipetoPass"></app-recipe-detail>
+        <ng-template #infotext>
+            No recipes selected!
+        </ng-template>
+    </div>
+</div>

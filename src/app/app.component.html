@@ -1,9 +1,9 @@
+<app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2>K am work</h2>
-    <button class="btn btn-primary">my button</button>
+      <app-recipes *ngIf="feature === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf=" feature === 'shopping'"></app-shopping-list>
     </div>
   </div>
-  
 </div>
