@@ -1,21 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { exhaustMap, map, tap, take } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 import { Recipe } from '../recipes/recipe.model';
 import { RecipeService } from '../recipes/recipe.service';
 import { AuthService } from '../auth/auth.service';
-import { User } from '../auth/user.model';
+import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
 @Injectable({ providedIn: 'root' })
 export class DataStorageService {
   constructor(
     private http: HttpClient,
     private recipeService: RecipeService,
-    private authservice: AuthService
+    private shoppingListService: ShoppingListService
   ) {}
 
   storeRecipes() {
+    //store updated recipes to server
     const recipes = this.recipeService.getRecipes();
     this.http
       .put(
@@ -25,6 +26,18 @@ export class DataStorageService {
       .subscribe((response) => {
         console.log(response);
       });
+
+    // store shoppinglist to server
+    // const shopping = this.shoppingListService.getIngredients();
+    // this.http
+    //   .put(
+    //     'https://my-recipe-book-281fe-default-rtdb.firebaseio.com/shopping.json',
+    //     shopping
+    //   )
+
+    //   .subscribe((response) => {
+    //     console.log(response);
+    //   });
   }
   fetchRecipes() {
     return this.http
