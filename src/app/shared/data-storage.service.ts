@@ -29,14 +29,14 @@ export class DataStorageService {
   fetchRecipes() {
     return this.http
       .get<Recipe[]>(
-        'https://my-recipe-book-281fe-default-rtdb.firebaseio.com/recipes.json'
+        'https://my-recipe-book-281fe-default-rtdb.firebaseio.com/recipes.json/'
       )
       .pipe(
         map((recipes: Recipe[]) => {
           return recipes.map((recipe: Recipe) => {
             return {
               ...recipe,
-              ingredient: recipe.ingredient ? recipe.ingredient : [],
+              ingredients: recipe.ingredients ? recipe.ingredients : [],
             };
           });
         }),
