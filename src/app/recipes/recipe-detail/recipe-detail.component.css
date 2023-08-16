@@ -19,8 +19,6 @@
   font-family: "Source Sans Pro", sans-serif;
   font-size: 15px;
   line-height: 32px;
-  margin-top: 15px;
-  margin-bottom: 15px;
 }
 #recipe-detail-ingredient {
   color: #b48608;
@@ -30,4 +28,21 @@
   line-height: 24px;
   margin: 0 0 14px;
   background-color: thistle;
+}
+
+.recipe-list-making {
+  color: #7c795d;
+  font-family: "Trocchi", serif;
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 48px;
+  margin-top: 15px;
+}
+.recipe-list-ing {
+  margin-bottom: 15px;
+  color: #7c795d;
+  font-family: "Trocchi", serif;
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 48px;
 }
