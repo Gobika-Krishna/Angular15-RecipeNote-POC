@@ -3,9 +3,23 @@
     <h1>{{ recipe.name }}</h1>
   </div>
 </div>
+
 <div class="row" id="recipe-detail-shortDesc">
   <div class="col-xs-12">
     {{ recipe.shortDesc }}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-responsive" style="max-height: 300px;">
+  </div>
+</div>
+
+
+<div class="row" id="recipe-detail-desc">
+  <div class="col-xs-12">
+    {{ recipe.description }}
   </div>
 </div>
 <div class="row" style="margin-bottom: 10px;">
@@ -20,18 +34,6 @@
         <li><a style="cursor: pointer;" (click)="onDeleteRecipe()">Delete Recipe</a></li>
       </ul>
     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-responsive" style="max-height: 300px;">
-  </div>
-</div>
-
-
-<div class="row" id="recipe-detail-desc">
-  <div class="col-xs-12">
-    {{ recipe.description }}
   </div>
 </div>
 <div class="row" id="recipe-detail-ingredient">
