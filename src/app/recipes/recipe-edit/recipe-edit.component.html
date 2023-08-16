@@ -31,11 +31,19 @@
                     <img [src]="imagePath.value" class="img-responsive">
                 </div>
             </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="shortDesc">Short description</label>
+                        <input type="text" id="shortDesc" class="form-control" formControlName="shortDesc" />
+                    </div>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-xs-12">
                     <div class="form-group">
-                        <label for="description">description</label>
+                        <label for="description">Description</label>
                         <textarea type="text" id="description" rows="6" class="form-control"
                             formControlName="description">
                         </textarea>
