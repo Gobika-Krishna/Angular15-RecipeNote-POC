@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { OrderPlacementComponent } from './order-placement/order-placement.component';
+import { AuthGuard } from './auth/auth.guard';
 
 // Lazy load the  feature modules
 const routes: Routes = [
@@ -19,6 +21,11 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+  },
+  {
+    path: 'order',
+    component: OrderPlacementComponent,
+    canActivate: [AuthGuard],
   },
 ];
 @NgModule({

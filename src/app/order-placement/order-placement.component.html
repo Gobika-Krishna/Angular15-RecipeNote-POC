@@ -1,0 +1,103 @@
+<!-- <ng-template appPlaceholder></ng-template> -->
+<div class="container-fluid custom-container">
+    <div class="row">
+        <h1>Your Shopping Order</h1>
+    </div>
+    <form (ngSubmit)="onSubmit(orderForm)" #orderForm="ngForm">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-1">
+
+                <div class="row">
+                    <div class="col-md-6 form-group custom-col1">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" ngModel name="name" required />
+                    </div>
+                    <div class="col-md-6 form-group custom-col2">
+                        <label for="lname">lastname</label>
+                        <input type="text" id="lname" class="form-control" ngModel name="lname" required />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" class="form-control" ngModel name="email" required email />
+                </div>
+
+                <div class="row form-group">
+                    <label for="phone"> Phone number </label>
+                    <input type="number" id="phone" class="form-control" ngModel name="phone" required />
+                </div>
+
+                <div class="row form-group">
+                    <label for="address"> Street Address </label>
+                    <input type="text" name="address" id="address" class="form-control" ngModel required />
+                </div>
+
+                <div class="row form-group">
+                    <label for="address2">Street Address </label>
+                    <input type="text" name="address2" id="address2" class="form-control" ngModel required />
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group custom-col1">
+                        <label for="state"> State/Prvince </label>
+                        <input type="text" name="state" id="state" class="form-control" ngModel required />
+                    </div>
+                    <div class="col-md-6 form-group custom-col2">
+                        <label for="country"> Country </label>
+                        <input type="text" name="country" id="country" class="form-control" ngModel required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group custom-col1">
+                        <label for="post"> Post/Zip code </label>
+                        <input type="text" name="post" id="post" class="form-control" ngModel required />
+                    </div>
+                    <div class="col-md-6 form-group custom-col2">
+                        <label for="area"> Area Code </label>
+                        <input type="text" name="area" id="area" class="form-control" ngModel required />
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="Yorder">
+                    <table>
+                        <tr>
+                            <th colspan="2">Your order</th>
+                        </tr>
+                        <tr>
+                            <td>Product Qty</td>
+                            <td>{{quantity}}</td>
+                        </tr>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td>{{quantity * 10}}</td>
+                        </tr>
+                        <tr>
+                            <td>Shipping</td>
+                            <td>Free shipping</td>
+                        </tr>
+                    </table><br>
+                    <div>
+                        <input type="radio" name="dbt" value="dbt" checked> Direct Bank Transfer
+                    </div>
+                    <p>
+                        Make your payment directly into our bank account. Please use your Order ID as the payment
+                        reference.
+                        Your order will not be shipped until the funds have cleared in our account.
+                    </p>
+                    <div>
+                        <input type="radio" name="dbt" value="cd"> Cash on Delivery
+                    </div>
+                    <div>
+                        <input type="radio" name="dbt" value="cd"> Paypal <span>
+                            <img src="https://www.logolynx.com/images/logolynx/c3/c36093ca9fb6c250f74d319550acac4d.jpeg"
+                                alt="" width="50">
+                        </span>
+                    </div>
+                    <button class="btn btn-success custom-btn" type="submit" [disabled]="!orderForm.valid">Place
+                        Order</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
