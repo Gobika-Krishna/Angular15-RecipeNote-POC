@@ -1,0 +1,14 @@
+.div-center {
+	display: table;
+	height: 100%;
+}
+
+div.content {
+	position: absolute;
+	top: 47%;
+	width: inherit;
+	transform: translateY(-50%);
+}
+
+
+
