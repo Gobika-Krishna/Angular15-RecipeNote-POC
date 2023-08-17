@@ -9,6 +9,7 @@
         </ul>
     </div>
     <div class="col-xs-4">
-        <button type="button" class="btn btn-success" routerLink="/order">Place Order </button>
+        <button type="button" class="btn btn-success" routerLink="/order" [disabled]="!ingredients.length">Place Order
+        </button>
     </div>
 </div>

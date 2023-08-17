@@ -10,6 +10,7 @@ import { CoreModule } from './core.module';
 import { FooterComponent } from './footer/footer.component';
 import { OrderPlacementComponent } from './order-placement/order-placement.component';
 import { FormsModule } from '@angular/forms';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     OrderPlacementComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
