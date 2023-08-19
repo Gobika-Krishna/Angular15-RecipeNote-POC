@@ -3,6 +3,9 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { OrderPlacementComponent } from './order-placement/order-placement.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ModalComponent } from './modal/modal.component';
+import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 // Lazy load the  feature modules
 const routes: Routes = [
@@ -31,6 +34,18 @@ const routes: Routes = [
   {
     path: 'modal',
     component: ModalComponent,
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'products',
+    component: ProductsComponent,
+  },
+  {
+    path: 'contact-us',
+    component: ContactUsComponent,
   },
 ];
 @NgModule({

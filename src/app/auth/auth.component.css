@@ -9,6 +9,8 @@ div.content {
 	width: inherit;
 	transform: translateY(-50%);
 }
-
+.alert-danger{
+	margin-top: 5px;
+}
 
 

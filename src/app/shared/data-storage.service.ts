@@ -26,17 +26,17 @@ export class DataStorageService {
         console.log(response);
       });
 
-    //store shoppinglist to server
-    // const shopping = this.shoppingListService.getIngredients();
-    // this.http
-    //   .put(
-    //     'https://my-recipe-book-281fe-default-rtdb.firebaseio.com/shopping.json',
-    //     shopping
-    //   )
+    // store shoppinglist to server
+    const shopping = this.shoppingListService.getIngredients();
+    this.http
+      .put(
+        'https://my-recipe-book-281fe-default-rtdb.firebaseio.com/shopping.json',
+        shopping
+      )
 
-    //   .subscribe((response) => {
-    //     console.log(response);
-    //   });
+      .subscribe((response) => {
+        console.log(response);
+      });
   }
   fetchRecipes() {
     return this.http

@@ -11,6 +11,11 @@ import { FooterComponent } from './footer/footer.component';
 import { OrderPlacementComponent } from './order-placement/order-placement.component';
 import { FormsModule } from '@angular/forms';
 import { ModalComponent } from './modal/modal.component';
+import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { BannerComponent } from './banner/banner.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +24,11 @@ import { ModalComponent } from './modal/modal.component';
     FooterComponent,
     OrderPlacementComponent,
     ModalComponent,
+    HomeComponent,
+    ProductsComponent,
+    CarouselComponent,
+    BannerComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
