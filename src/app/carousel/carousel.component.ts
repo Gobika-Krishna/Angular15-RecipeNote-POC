@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarouselComponent implements OnInit {
   constructor() {}
+  selectedSlideIndex = 0; // Initial index
 
   carouselImages = [
     {

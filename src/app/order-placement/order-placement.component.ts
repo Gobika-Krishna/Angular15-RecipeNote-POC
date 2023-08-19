@@ -17,7 +17,7 @@ export class OrderPlacementComponent implements OnInit {
   price: number;
   modalOpen = false;
   ngOnInit(): void {
-    document.body.style.background = '#f6f6f6'; // display background color only to orders page
+    // document.body.style.backgrocsAund = '#f6f6f6'; // display background color only to orders page
     this.orderService.orderValue.subscribe((orderData) => {
       console.log('orderdata:', orderData);
       this.quantity = orderData.quantity;

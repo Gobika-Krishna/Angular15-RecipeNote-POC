@@ -25,6 +25,7 @@ export class ProductsComponent {
       description: 'A bag of delicious apples!',
       url: 'https://newenglandapples.files.wordpress.com/2014/10/img_5595.jpg',
       addtoCartText: 'Add to cart',
+      updatedCart: false,
     },
     {
       id: 2,
@@ -33,6 +34,7 @@ export class ProductsComponent {
       description: 'A bag of delicious Oranges!',
       url: 'https://sc01.alicdn.com/kf/UT8.CaXX2NXXXagOFbXC/fresh-navel-oranges.jpg',
       addtoCartText: 'Add to cart',
+      updatedCart: false,
     },
     {
       id: 3,
@@ -41,6 +43,7 @@ export class ProductsComponent {
       description: 'A bag of delicious Oranges!',
       url: 'https://sc01.alicdn.com/kf/UT8ovSIXQNaXXagOFbXt/Fresh-Passion-Fruit-with-Best-Price-and.jpg',
       addtoCartText: 'Add to cart',
+      updatedCart: false,
     },
     {
       id: 4,
@@ -49,6 +52,7 @@ export class ProductsComponent {
       description: 'A bag of delicious Pineapple!',
       url: 'https://www.foodmatters.com/media/images/articles/16-powerful-reasons-to-eat-pineapple.jpg',
       addtoCartText: 'Add to cart',
+      updatedCart: false,
     },
     {
       id: 5,
@@ -57,6 +61,7 @@ export class ProductsComponent {
       description: 'A bag of delicious Pineapple!',
       url: 'http://membrillo.com.au/wp-content/uploads/2016/11/bg-mango-01.jpg',
       addtoCartText: 'Add to cart',
+      updatedCart: false,
     },
     {
       id: 6,
@@ -65,6 +70,7 @@ export class ProductsComponent {
       description: 'A bag of delicious Coconut!',
       url: 'http://ell.h-cdn.co/assets/16/27/980x490/landscape-1467750721-gettyimages-146896572.jpg',
       addtoCartText: 'Add to cart',
+      updatedCart: false,
     },
     {
       id: 7,
@@ -73,6 +79,7 @@ export class ProductsComponent {
       description: 'A bag of delicious Bananas!',
       url: 'https://images.all-free-download.com/images/graphicwebp/fresh_banana_picture_167146.webp',
       addtoCartText: 'Add to cart',
+      updatedCart: false,
     },
     {
       id: 8,
@@ -81,6 +88,7 @@ export class ProductsComponent {
       description: 'A bag of delicious Plums!',
       url: 'https://img.freepik.com/premium-photo/plum-texture-high-quality_670382-75472.jpg?size=626&ext=jpg&ga=GA1.2.1022120060.1692397104&semt=ais',
       addtoCartText: 'Add to cart',
+      updatedCart: false,
     },
     {
       id: 9,
@@ -89,6 +97,7 @@ export class ProductsComponent {
       description: 'A bag of delicious Avacados!',
       url: 'https://media.istockphoto.com/id/1359819435/photo/halves-of-fresh-avocado-on-a-cutting-board.webp?b=1&s=170667a&w=0&k=20&c=VMrEYk9r0UT6pVSqWpRjkMdSSRg-KsDaKvh2c2n_G-Y=',
       addtoCartText: 'Add to cart',
+      updatedCart: false,
     },
   ];
 
@@ -144,7 +153,6 @@ export class ProductsComponent {
       }
     }
   }
-
   onSubmit(form: NgForm) {
     const selectedProducts = this.productsAdded.filter(
       (product) => product.quantity > 0
@@ -171,6 +179,7 @@ export class ProductsComponent {
     this.router.navigate(['/order']);
   }
 
+  // disable/enable the checkout function
   hasSelectedProducts(): boolean {
     return (
       this.productsAdded.length > 0 &&

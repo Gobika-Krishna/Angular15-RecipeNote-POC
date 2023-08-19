@@ -20,7 +20,8 @@
                         (ngModelChange)="updateAddToCartText(product)">
                 </div>
                 <button class="btn btn-success" type="button" [name]="'btn-' +product.id" [id]="'btn-' +product.id"
-                    (click)="addtoCart(product.id, i)">{{product.addtoCartText}}</button>
+                    (click)="addtoCart(product.id, i)"
+                    [disabled]="product.addtoCartText === 'Added to Cart'">{{product.addtoCartText}}</button>
             </div>
         </div>
 
