@@ -78,3 +78,6 @@ header.carousel .item{
     font:italic 300 24px/28px "Open Sans",sans-serif;
     color:#2b3a42
 }
+.home-conatiner {
+    margin-top: -21px;
+}

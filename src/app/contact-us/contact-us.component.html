@@ -1,13 +1,25 @@
 <div class="contact-section">
     <h1>Contact Us</h1>
-    <div class="border"></div>
-    <form class="contact-form" (ngSubmit)="onSubmit()">
-        <input type="text" class="contact-form-text" placeholder="Your name" [(ngModel)]="name" name="name" required>
+    <form #contactForm="ngForm" class="contact-form" (ngSubmit)="onSubmit()">
+        <input type="text" class="contact-form-text" placeholder="Your name" [(ngModel)]="name" name="name"
+            #nameField="ngModel" required>
+        <div *ngIf="nameField.touched && nameField.invalid" class="error-message">Name is required.</div>
+
         <input type="email" class="contact-form-text" placeholder="Your email" [(ngModel)]="email" name="email"
-            required>
-        <input type="text" class="contact-form-text" placeholder="Your phone" [(ngModel)]="phone" name="phone">
+            #emailField="ngModel" email required>
+        <div *ngIf="emailField.touched && emailField.invalid" class="error-message">Please enter a
+            valid email address.
+        </div>
+
+        <input type="text" class="contact-form-text" placeholder="Your phone" [(ngModel)]="phone" name="phone"
+            #phoneField="ngModel" required>
+        <div *ngIf="phoneField.touched && phoneField.invalid" class="error-message">Phone is required.</div>
+
         <textarea class="contact-form-text" placeholder="Your message" [(ngModel)]="message" name="message"
-            required></textarea>
-        <input type="submit" class="contact-form-btn" value="Send">
+            #messageField="ngModel" required></textarea>
+        <div *ngIf="messageField.touched && messageField.invalid" class="error-message">Message is required.</div>
+
+        <button type="submit" class="btn btn-success contact-form-btn"
+            [disabled]="nameField.invalid || emailField.invalid || phoneField.invalid || messageField.invalid">Send</button>
     </form>
 </div>

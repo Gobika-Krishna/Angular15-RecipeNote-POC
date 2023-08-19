@@ -16,6 +16,9 @@ import { ProductsComponent } from './products/products.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { BannerComponent } from './banner/banner.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SuccessModalComponent } from './success-modal/success-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     CarouselComponent,
     BannerComponent,
     ContactUsComponent,
+    SuccessModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     SharedModule,
     CoreModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
   ],
 
   bootstrap: [AppComponent],

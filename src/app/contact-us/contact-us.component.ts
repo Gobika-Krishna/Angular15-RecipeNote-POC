@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { SuccessModalComponent } from '../success-modal/success-modal.component';
+import { MatDialog } from '@angular/material/dialog';
+import { NgForm } from '@angular/forms'; // Import NgForm
 
 @Component({
   selector: 'app-contact-us',
@@ -6,19 +9,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact-us.component.css'],
 })
 export class ContactUsComponent {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
+  name: string = '';
+  email: string = '';
+  phone: string = '';
+  message: string = '';
+
+  @ViewChild('name') nameField!: ElementRef;
+  @ViewChild('email') emailField!: ElementRef;
+  @ViewChild('message') messageField!: ElementRef;
+
+  constructor(private dialog: MatDialog) {}
+
+  @ViewChild('contactForm') contactForm!: NgForm; // Reference to the form
 
   onSubmit() {
-    // You can implement the form submission logic here
-    console.log(
-      'Form submitted:',
-      this.name,
-      this.email,
-      this.phone,
-      this.message
-    );
+    // Simulate form submission
+    setTimeout(() => {
+      this.dialog.open(SuccessModalComponent, {
+        width: '300px',
+      });
+
+      this.contactForm.resetForm(); // Reset the form
+    }, 1000);
   }
 }

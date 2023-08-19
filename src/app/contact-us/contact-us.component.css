@@ -48,14 +48,13 @@
   .contact-form-btn{
     float: right;
     border: 0;
-    background: #34495e;
     color: #fff;
     padding: 12px 50px;
     border-radius: 20px;
-    cursor: pointer;
     transition: 0.5s;
   }
-  .contact-form-btn:hover{
-    background: #2980b9;
+
+  .error-message{
+    color: red;
+    opacity: 0.8;
   }
-  
