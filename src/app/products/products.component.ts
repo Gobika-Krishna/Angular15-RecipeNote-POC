@@ -153,7 +153,7 @@ export class ProductsComponent {
       }
     }
   }
-  onSubmit(form: NgForm) {
+  onSubmit() {
     const selectedProducts = this.productsAdded.filter(
       (product) => product.quantity > 0
     );
@@ -162,9 +162,6 @@ export class ProductsComponent {
       const productPrice = parseFloat(product.price.replace('$', '')); // Convert price to a numerical value
       return total + productPrice * product.quantity;
     }, 0);
-
-    console.log('Selected Products:', selectedProducts);
-    console.log('Total Price:', totalPrize);
     this.orderservice.orderValue.next({
       quantity: selectedProducts.length, // Correct the property name to "quantity"
       price: totalPrize,

@@ -17,7 +17,12 @@ export class RecipesResolverService implements Resolve<Recipe[]> {
     private recipeService: RecipeService
   ) {}
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+  resolve(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    route: ActivatedRouteSnapshot,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    state: RouterStateSnapshot
+  ) {
     const recipes = this.recipeService.getRecipes();
     if (recipes.length === 0) {
       return this.dataStorageService.fetchRecipes();

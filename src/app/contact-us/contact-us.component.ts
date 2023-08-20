@@ -30,6 +30,6 @@ export class ContactUsComponent {
       });
 
       this.contactForm.resetForm(); // Reset the form
-    }, 1000);
+    }, 500);
   }
 }

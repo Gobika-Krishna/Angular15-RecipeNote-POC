@@ -8,7 +8,5 @@ import { Component, OnInit } from '@angular/core';
 export class RecipesComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {
-    document.body.style.background = '#ffff'; // display background color only to orders page
-  }
+  ngOnInit(): void {}
 }
