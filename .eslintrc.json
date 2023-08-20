@@ -8,8 +8,11 @@
   }
   
 
-// command to perform eslint 
+// command to perform eslint for all ts files
 // npx eslint "src/**/*.ts"
 
 // command to run stylelint for css files
 // npx stylelint "**/*.css"
+// stylelint "src/**/*.css"
+// npx stylelint "**/*.css" --fix
+

@@ -118,3 +118,7 @@ input:checked + .slide-container .carousel-controls label {
     opacity: 1 !important;
 }
 input:checked + .slide-container .nav label { display: block; }
+
+.recipe-name {
+    font-size: 40px;
+}

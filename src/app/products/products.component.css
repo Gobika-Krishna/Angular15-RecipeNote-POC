@@ -19,9 +19,7 @@
     margin: 1%;
   }
   
-  .product:hover {
-    box-shadow: 1.5px 1.5px 2.5px 3px rgb(0 0 0 / 40%);
-    box-shadow: 1.5px 1.5px 2.5px 3px rgb(0 0 0 / 40%);  
+  .product:hover {  
     box-shadow:    1.5px 1.5px 2.5px 3px rgb(0 0 0 / 40%);
   }
   
@@ -97,15 +95,15 @@
     width: 15%;
     clear: none;
   }
-  
-  .text-box button {
-    margin-top: 1em;
-  }
-  
+
   button {
     padding: 2%;
     border: none;
     border-radius: 2%;
+  }
+  
+  .text-box button {
+    margin-top: 1em;
   }
   
   button:hover {
@@ -180,7 +178,7 @@
     width: 53%;
     float: left;
     margin: 3.2em 1%;
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     font-weight: 300;
     font-size: 1em;
     text-align: center;
