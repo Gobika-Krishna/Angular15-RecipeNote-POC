@@ -50,16 +50,17 @@
                 <div class="row form-group">
                     <label for="phone">Phone number</label>
                     <input type="tel" id="phone" class="form-control" ngModel name="phone" required
-                        #phoneInput="ngModel" pattern="[0-9]*" placeholder="(123) 456-7890" />
+                        #phoneInput="ngModel" pattern="[0-9]{10}" placeholder="(123) 456-7890" />
                     <div class="error-message" *ngIf="phoneInput.touched && phoneInput.invalid">
                         <div *ngIf="phoneInput.errors.required">
                             Please enter a phone number.
                         </div>
                         <div *ngIf="phoneInput.errors.pattern">
-                            Please enter a valid phone number.
+                            Please enter a valid 10-digit phone number.
                         </div>
                     </div>
                 </div>
+
 
                 <div class="row form-group">
                     <!-- street address -->
