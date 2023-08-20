@@ -1,25 +1,24 @@
 html{
-    -ms-text-size-adjust:100%;
-    -webkit-text-size-adjust:100%;
-    -ms-touch-action:manipulation;
+    text-size-adjust:100%;
     touch-action:manipulation;
-    font-family:Roboto,'Droid Sans',Avenir,Segoe UI,Helvetica Neue,sans-serif;
+    font-family:'Roboto','Droid Sans','Avenir',"Segoe UI","Helvetica Neue",sans-serif;
     width:100%
 }
+
 body,html{
-    color:rgba(0,0,0,.75);
+    color:rgb(0 0 0 / 75%);
     font-weight:400;
     margin:0;
     padding:0;
     overflow-x:visible!important
 }
+
 body{
     display:-webkit-box;
-    display:-ms-flexbox;
+    display:flexbox;
     display:flex;
     -webkit-box-orient:vertical;
     -webkit-box-direction:normal;
-    -ms-flex-direction:column;
     flex-direction:column;
     font-size:18px;
     height:100%;
@@ -27,19 +26,21 @@ body{
     min-height:100vh;
     width:100%
 }
+
 .shado-banner{
-    -webkit-box-shadow:0 2px 2px -1px rgba(0,0,0,.35),0 1px 5px -2px rgba(0,0,0,.35),0 1px 8px -1px rgba(0,0,0,.25);
-    box-shadow:0 2px 2px -1px rgba(0,0,0,.35),0 1px 5px -2px rgba(0,0,0,.35),0 1px 8px -1px rgba(0,0,0,.25)
+    box-shadow:0 2px 2px -1px rgb(0 0 0 / 35%),0 1px 5px -2px rgb(0 0 0 / 35%),0 1px 8px -1px rgb(0 0 0 / 25%);
 }
+
 *{
-    -webkit-box-sizing:border-box;
-    box-sizing:border-box
+    box-sizing:border-box;
 }
+
 #left-flex .ribbon *{
     position:relative
 }
-#left-flex .ribbon:before{
-    background-color:rgba(20,30,50,.9);
+
+#left-flex .ribbon::before{
+    background-color:rgb(20 30 50 / 90%);
     content:'';
     display:block;
     height:525px;
@@ -48,14 +49,14 @@ body{
     width:100%;
     z-index:0
 }
+
 #left-flex .ribbon{
     -webkit-box-align:center;
     -ms-flex-align:center;
     align-items:center;
     background-size:cover;
-    background:url(../../assets/images/food-3270461_1280.jpg) center center/cover no-repeat fixed;
+    background:url("../../assets/images/food-3270461_1280.jpg") center center/cover no-repeat fixed;
     display:-webkit-box;
-    display:-ms-flexbox;
     display:flex;
     height:525px;
     -webkit-box-pack:center;
@@ -65,13 +66,12 @@ body{
     width:100%;
     z-index:-1
 }
+
 #left-flex .title-wrapper{
     display:-webkit-box;
-    display:-ms-flexbox;
     display:flex;
     -webkit-box-orient:vertical;
     -webkit-box-direction:normal;
-    -ms-flex-flow:column wrap;
     flex-flow:column wrap;
     -webkit-box-pack:center;
     -ms-flex-pack:center;
@@ -83,6 +83,7 @@ body{
     text-align:left;
     width:88%
 }
+
 #left-flex .title-wrapper>*{
     color:#f2f2f2;
     font-weight:400;
@@ -90,36 +91,40 @@ body{
     padding:0;
     text-align:left
 }
+
 #left-flex h1{
     font-size:3.5rem;
     line-height:1.1
 }
+
 #left-flex p{
     font-size:1.75rem
 }
-@media only screen and (max-width:629px){
+
+@media only screen and (width <=629px){
     #left-flex .title-wrapper{
-        -webkit-appearance:none;
-        -moz-appearance:none;
         appearance:none
     }
+
     #left-flex #title-wrapper h1{
         font-size:2.75rem
     }
+
     #left-flex p{
         font-size:1.4rem
     }
 }
+
 #fixed-bg .title-wrapper *{
     position:relative
 }
+
 #fixed-bg .title-wrapper{
     -webkit-box-align:center;
     -ms-flex-align:center;
     align-items:center;
-    background:url(../../assets/images/food-3270461_1280.jpg) center bottom/cover no-repeat fixed;
+    background:url("../../assets/images/food-3270461_1280.jpg") center bottom/cover no-repeat fixed;
     display:-webkit-box;
-    display:-ms-flexbox;
     display:flex;
     height:400px;
     -webkit-box-pack:center;
@@ -129,8 +134,9 @@ body{
     width:100%;
     z-index:-1
 }
-#fixed-bg .title-wrapper:before{
-    background-color:rgba(72,111,230,.9);
+
+#fixed-bg .title-wrapper::before{
+    background-color:rgb(72 111 230 / 90%);
     content:" ";
     display:block;
     height:400px;
@@ -139,13 +145,14 @@ body{
     width:100%;
     z-index:0
 }
+
 #fixed-bg h1{
     -webkit-box-align:center;
     -ms-flex-align:center;
     align-items:center;
     color:#f6f6f6;
     display:-webkit-box;
-    display:-ms-flexbox;
+    display:flexbox;
     display:flex;
     float:none;
     font-size:3.25em;
@@ -161,30 +168,33 @@ body{
     width:90%;
     line-height:1.1
 }
-@media only screen and (max-width:649px){
+
+@media only screen and (width <=649px){
     #fixed-bg h1{
         appearance:none;
-        -webkit-appearance:none;
-        -moz-appearance:none
     }
 }
-@media only screen and (max-width:649px) and (min-width:530px){
+
+@media only screen and (width <=649px) and (width >=530px){
     #fixed-bg h1{
         font-size:2.8em
     }
 }
-@media only screen and (max-width:529px){
+
+@media only screen and (width <=529px){
     #fixed-bg h1{
         font-size:2.4em;
         height:100%;
         width:100%;
     }
 }
+
 #title-outlined .ribbon *{
     position:relative
 }
-#title-outlined .ribbon:before{
-    background:linear-gradient(110deg,rgba(225,151,19,.5) -30%,rgba(159,91,118,.9) 44%,rgba(130,111,203,.9) 105%);
+
+#title-outlined .ribbon::before{
+    background:linear-gradient(110deg,rgb(225 151 19 / 50%) -30%,rgb(159 91 118 / 90%) 44%,rgb(130 111 203 / 90%) 105%);
     content:" ";
     display:block;
     height:400px;
@@ -193,13 +203,14 @@ body{
     width:100%;
     z-index:0
 }
+
 #title-outlined .ribbon{
     -webkit-box-align:center;
     -ms-flex-align:center;
     align-items:center;
-    background:url(../../assets/images/food-3270461_1280.jpg) left center/cover no-repeat scroll;
+    background:url("../../assets/images/food-3270461_1280.jpg") left center/cover no-repeat scroll;
     display:-webkit-box;
-    display:-ms-flexbox;
+    display:flexbox;
     display:flex;
     float:none;
     height:400px;
@@ -212,6 +223,7 @@ body{
     width:100%;
     z-index:-1
 }
+
 #title-outlined h1{
     border-top:3px solid #f5f5f5;
     border-bottom:3px solid #f5f5f5;
@@ -225,36 +237,38 @@ body{
     line-height:1.2;
     padding:15px;
     text-align:center;
-    text-shadow:1px 0 1px rgba(0,0,0,.45);
+    text-shadow:1px 0 1px rgb(0 0 0 / 45%);
     width:80%
 }
-@media only screen and (max-width:649px){
+
+@media only screen and (width <=649px){
     #title-outlined h1{
         appearance:none;
-        -webkit-appearance:none;
-        -moz-appearance:none;
         font-size:3rem;
         width:88%
     }
 }
-@media only screen and (max-width:529px){
+
+@media only screen and (width <=529px){
     #title-outlined h1{
         font-size:2.5rem;
         width:100%;
         padding:10px 0
     }
 }
+
 #transparent-overlay .overlay *{
     position:relative
 }
+
 #transparent-overlay .overlay{
     -webkit-box-align:center;
     -ms-flex-align:center;
     align-items:center;
     background-size:cover;
-    background:url(../../assets/images/food-3270461_1280.jpg) 65% center/cover no-repeat scroll;
+    background:url("../../assets/images/food-3270461_1280.jpg") 65% center/cover no-repeat scroll;
     display:-webkit-box;
-    display:-ms-flexbox;
+    display:flexbox;
     display:flex;
     height:400px;
     -webkit-box-pack:center;
@@ -265,13 +279,14 @@ body{
     width:100%;
     z-index:1
 }
+
 #transparent-overlay .title-wrapper{
     -webkit-box-align:center;
     -ms-flex-align:center;
     align-items:center;
-    background-color:rgba(250,251,252,.77);
+    background-color:rgb(250 251 252 / 77%);
     display:-webkit-box;
-    display:-ms-flexbox;
+    display:flexbox;
     display:flex;
     -webkit-box-pack:center;
     -ms-flex-pack:center;
@@ -280,6 +295,7 @@ body{
     max-width:880px;
     width:73%
 }
+
 #transparent-overlay .title-wrapper h2{
     color:#4e70c1;
     font-size:42px;
@@ -290,26 +306,31 @@ body{
     text-align:center;
     width:80%
 }
-@media only screen and (max-width:519px){
+
+@media only screen and (width <=519px){
     #transparent-overlay .title-wrapper{
         width:97%
     }
+
     #transparent-overlay .title-wrapper h2{
         font-size:32px
     }
 }
+
 #skewed .overlay *{
     position:relative
 }
+
 #skewed{
     height:650px;
     overflow:hidden;
-    -webkit-transform:skewY(0) translateY(0);
+    transform:skewY(0) translateY(0);
     transform:skewY(0) translateY(0);
     width:100%
 }
-#skewed .overlay:before{
-    background:linear-gradient(-182deg,rgba(121,50,116,.9) 5%,rgba(41,80,156,.85) 100%);
+
+#skewed .overlay::before{
+    background:linear-gradient(-182deg,rgb(121 50 116 / 90%) 5%,rgb(41 80 156 / 85%) 100%);
     content:"";
     display:block;
     height:600px;
@@ -319,30 +340,29 @@ body{
     width:100%;
     z-index:0
 }
+
 #skewed .overlay{
     -webkit-box-align:center;
     -ms-flex-align:center;
     align-items:center;
-    background:url(../../assets/images/food-3270461_1280.jpg) center center/cover no-repeat scroll;
-    bottom:0;
+    background:url("../../assets/images/food-3270461_1280.jpg") center center/cover no-repeat scroll;
+    inset:0;
     display:-webkit-box;
-    display:-ms-flexbox;
+    display:flexbox;
     display:flex;
     height:600px;
     -webkit-box-pack:center;
     -ms-flex-pack:center;
     justify-content:center;
-    left:0;
     overflow:hidden;
     position:absolute;
-    right:0;
-    top:0;
-    -webkit-transform-origin:top left;
     transform-origin:top left;
-    -webkit-transform:skewY(-4deg) translateY(-8%);
+    transform-origin:top left;
+    transform:skewY(-4deg) translateY(-8%);
     transform:skewY(-4deg) translateY(-8%);
     z-index:-1
 }
+
 #skewed h1{
     color:#fff;
     font-size:3.5rem;
@@ -350,22 +370,25 @@ body{
     line-height:1.2;
     margin:0 auto;
     text-align:center;
-    -webkit-transform-origin:top left;
     transform-origin:top left;
-    -webkit-transform:skewY(4deg) translateY(8%);
+    transform-origin:top left;
+    transform:skewY(4deg) translateY(8%);
     transform:skewY(4deg) translateY(8%);
     width:77%
 }
-@media only screen and (max-width:849px){
+
+@media only screen and (width <=849px){
     #skewed h1{
         font-size:3rem
     }
 }
+
 #simple-gradient .blue-overlay *{
     position:relative
 }
-#simple-gradient .blue-overlay:before{
-    background:linear-gradient(125deg,rgba(129,150,174,.9) -30%,rgba(29,50,74,.8) 40%,rgba(4,9,14,.6) 100%);
+
+#simple-gradient .blue-overlay::before{
+    background:linear-gradient(125deg,rgb(129 150 174 / 90%) -30%,rgb(29 50 74 / 80%) 40%,rgb(4 9 14 / 60%) 100%);
     content:"";
     display:block;
     height:400px;
@@ -374,23 +397,25 @@ body{
     width:100%;
     z-index:0
 }
+
 #simple-gradient .blue-overlay{
-    background:url(../../assets/images/food-3270461_1280.jpg) center center/cover no-repeat scroll;
+    background:url("../../assets/images/food-3270461_1280.jpg") center center/cover no-repeat scroll;
     display:-webkit-box;
-    display:-ms-flexbox;
+    display:flexbox;
     display:flex;
     height:400px;
     left:0;
     position:relative;
     z-index:-1
 }
+
 #simple-gradient h1{
     -webkit-box-align:center;
     -ms-flex-align:center;
     align-items:center;
     color:#fff;
     display:-webkit-box;
-    display:-ms-flexbox;
+    display:flexbox;
     display:flex;
     float:none;
     font-size:3.5rem;
@@ -404,7 +429,8 @@ body{
     text-align:center;
     width:90%
 }
-@media only screen and (max-width:849px){
+
+@media only screen and (width <=849px){
     #simple-gradient h1{
         font-size:3rem;
         width:77%

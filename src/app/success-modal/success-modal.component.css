@@ -8,8 +8,9 @@
     height: 250px;
     background-color: #fafafa;
     border-radius: 3px;
-    box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24)
+    box-shadow: 0 12px 36px 16px rgb(0 0 0 / 24%)
   }
+
   .title-text {
     display: inline-block;
     height: 35px;
@@ -17,16 +18,19 @@
     margin-left: 72px;
     margin-top: 22px;
   }
+
   .modal-content {
     padding: 20px;
     border-radius: 5px;
     border: none;
     text-align: center;
 }
+
 .modal-header {
     border-bottom: none;   
     position: relative;
 }
+
 .modal-footer {
     border: none;
     text-align: center;

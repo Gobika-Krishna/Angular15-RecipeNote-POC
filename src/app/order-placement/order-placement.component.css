@@ -3,28 +3,34 @@
   background-color: #f6f6f6;
   margin-top: -20px;
 }
+
 .Yorder{
   margin-top: 15px;
   height: 620px;
   padding: 20px;
   border: 1px solid #dadada;
 }
+
 table{
   margin: 0;
   padding: 0;
 }
+
 th{
   border-bottom: 1px solid #dadada;
   padding: 10px 0;
 }
+
 tr>td:nth-child(1){
   text-align: left;
   color: #2d2d2a;
 }
+
 tr>td:nth-child(2){
   text-align: right;
   color: #ff5e14;
 }
+
 td{
   border-bottom: 1px solid #dadada;
   padding: 25px 25px 25px 0;
@@ -36,6 +42,7 @@ p{
   margin: 0;
   padding-left: 25px;
 }
+
 .Yorder>div{
   padding: 15px 0; 
 }
@@ -50,6 +57,7 @@ button{
   font-size: 15px;
   font-weight: bold;
 }
+
 button:hover{
   cursor: pointer;
   background: #428a7d;
@@ -60,12 +68,13 @@ button:hover{
     padding: 0;
     background: #f6f6f6;
 }
+
 .custom-col1 {
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 .custom-col2 {
-    padding-right: 0px;
+    padding-right: 0;
 }
 
 
@@ -155,7 +164,7 @@ p {
 
 /* error & warning css */
 .error-message {
-  color: #ff0000; /* Red color for error text */
+  color: #f00; /* Red color for error text */
   font-size: 14px;
   margin-top: 5px;
 }

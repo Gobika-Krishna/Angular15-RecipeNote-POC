@@ -153,7 +153,7 @@ export class ProductsComponent {
       }
     }
   }
-  onSubmit() {
+  onSubmit(form: NgForm) {
     const selectedProducts = this.productsAdded.filter(
       (product) => product.quantity > 0
     );

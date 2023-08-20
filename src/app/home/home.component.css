@@ -1,46 +1,53 @@
 header.carousel{
     height:85%
 }
+
 header.carousel .item{
     height:100%
 }
+
 .error-404{
     font-size:100px
 }
-@media (max-width:767px){
+
+@media (width <=767px){
     header.carousel .carousel{
         height:50%
     }
 }
+
 .sectiona{
     background:url("../../assets/images/food-3270461_1280.jpg");
     width:100%;
     background-attachment:fixed
 }
+
 .sectionb{
     background:#d0d0d0;
     width:100%
 }
+
 .facontainer{
     width:auto;
     text-align:center;
     padding:20px;
     position:relative
 }
+
 .facontainer a{
     color:#000;
-    -webkit-transition:all .2s ease;
+    transition:all .2s ease;
     transition:all .2s ease
 }
+
 .facontainer a:hover{
     color:#87d0b0;
-    -webkit-transition:all .2s ease;
+    transition:all .2s ease;
     transition:all .2s ease
 }
+
 .facontainer h2{
-    color:#fff;
     text-align:center;
-    margin-bottom:26px;
     line-height:60px;
     font-size:56px;
     margin-bottom:20px;
@@ -48,6 +55,7 @@ header.carousel .item{
     color:#000;
     font-family:Roboto,sans-serif
 }
+
 .facontainer p{
     color:#000;
     text-align:center;
@@ -57,27 +65,32 @@ header.carousel .item{
     line-height:24px;
     font:14px/24px Roboto,sans-serif
 }
+
 #owl-demo{
     background:#fff
 }
+
 #owl-demo .item{
     display:block;
     padding:54px 0;
     margin:5px;
     color:#000;
-    -webkit-border-radius:3px;
-    -moz-border-radius:3px;
+    border-radius:3px;
+    border-radius:3px;
     border-radius:3px;
     text-align:center
 }
+
 #owl-demo h2{
     font:600 24px/28px "Open Sans",sans-serif;
     color:#99bf38
 }
+
 #owl-demo p{
     font:italic 300 24px/28px "Open Sans",sans-serif;
     color:#2b3a42
 }
+
 .home-conatiner {
     margin-top: -21px;
 }

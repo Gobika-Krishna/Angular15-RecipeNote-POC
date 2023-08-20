@@ -1,9 +1,10 @@
 #recipe-detail-shortDesc {
-  font-family: "Inder", sans-serif;
+  font-family: 'Inder', sans-serif;
   line-height: 28px;
   margin-bottom: 15px;
   color: #666;
 }
+
 #recipe-detail-name {
   font-family: "Droid serif", serif;
   font-size: 36px;
@@ -14,12 +15,14 @@
   text-align: center;
   color: #b48608;
 }
+
 #recipe-detail-desc {
   color: #4c4a37;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 15px;
   line-height: 32px;
 }
+
 #recipe-detail-ingredient {
   color: #b48608;
   font-family: "Droid Sans", sans-serif;
@@ -32,16 +35,17 @@
 
 .recipe-list-making {
   color: #7c795d;
-  font-family: "Trocchi", serif;
+  font-family: 'Trocchi', serif;
   font-size: 45px;
   font-weight: normal;
   line-height: 48px;
   margin-top: 15px;
 }
+
 .recipe-list-ing {
   margin-bottom: 15px;
   color: #7c795d;
-  font-family: "Trocchi", serif;
+  font-family: 'Trocchi', serif;
   font-size: 45px;
   font-weight: normal;
   line-height: 48px;
