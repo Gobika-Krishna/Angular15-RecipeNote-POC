@@ -19,6 +19,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SuccessModalComponent } from './success-modal/success-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TermsComponent } from './terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     BannerComponent,
     ContactUsComponent,
     SuccessModalComponent,
+    TermsComponent,
   ],
   imports: [
     BrowserModule,

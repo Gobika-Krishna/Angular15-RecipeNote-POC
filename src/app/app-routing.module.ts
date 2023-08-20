@@ -6,6 +6,7 @@ import { ModalComponent } from './modal/modal.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { TermsComponent } from './terms/terms.component';
 
 // Lazy load the  feature modules
 const routes: Routes = [
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'contact-us',
     component: ContactUsComponent,
+  },
+  {
+    path: 'terms',
+    component: TermsComponent,
   },
 ];
 @NgModule({
